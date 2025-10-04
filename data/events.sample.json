@@ -1,0 +1,80 @@
+[
+  {
+    "id": "event-001",
+    "title": "Community Kickoff Gathering",
+    "startsAt": "2024-05-30T18:00:00Z",
+    "endsAt": "2024-05-30T20:00:00Z",
+    "location": "VRChat Plaza",
+    "vrchatUrl": "https://vrchat.com/home/world/wrld_001",
+    "image": "./media/images/event-001.jpg",
+    "tags": ["Networking", "Deutsch"],
+    "featured": true,
+    "updatedAt": "2024-05-01T09:00:00Z",
+    "createdAt": "2024-04-15T10:30:00Z"
+  },
+  {
+    "id": "event-002",
+    "title": "Creator Workshop: Lighting Basics",
+    "startsAt": "2024-06-02T17:00:00Z",
+    "endsAt": "2024-06-02T19:00:00Z",
+    "location": "Studio Lounge",
+    "vrchatUrl": "https://vrchat.com/home/world/wrld_002",
+    "image": "./media/images/event-002.jpg",
+    "tags": ["Workshop", "Creative"],
+    "featured": false,
+    "updatedAt": "2024-05-05T10:00:00Z",
+    "createdAt": "2024-04-20T11:45:00Z"
+  },
+  {
+    "id": "event-003",
+    "title": "Speed Networking Night",
+    "startsAt": "2024-06-05T20:00:00Z",
+    "endsAt": "2024-06-05T21:30:00Z",
+    "location": "Hyper Club",
+    "vrchatUrl": "https://vrchat.com/home/world/wrld_003",
+    "image": "./media/images/event-003.jpg",
+    "tags": ["Networking", "English"],
+    "featured": true,
+    "updatedAt": "2024-05-07T11:00:00Z",
+    "createdAt": "2024-04-21T09:00:00Z"
+  },
+  {
+    "id": "event-004",
+    "title": "World Builders Meetup",
+    "startsAt": "2024-06-08T16:00:00Z",
+    "endsAt": "2024-06-08T18:30:00Z",
+    "location": "Builder's Bay",
+    "vrchatUrl": "https://vrchat.com/home/world/wrld_004",
+    "image": "./media/images/event-004.jpg",
+    "tags": ["Builders", "Collaboration"],
+    "featured": false,
+    "updatedAt": "2024-05-10T12:00:00Z",
+    "createdAt": "2024-04-25T13:20:00Z"
+  },
+  {
+    "id": "event-005",
+    "title": "Community Game Night",
+    "startsAt": "2024-06-12T19:00:00Z",
+    "endsAt": "2024-06-12T21:30:00Z",
+    "location": "Arcade Hub",
+    "vrchatUrl": "https://vrchat.com/home/world/wrld_005",
+    "image": "./media/images/event-005.jpg",
+    "tags": ["Games", "Fun"],
+    "featured": false,
+    "updatedAt": "2024-05-12T09:45:00Z",
+    "createdAt": "2024-04-28T15:00:00Z"
+  },
+  {
+    "id": "event-006",
+    "title": "Community Retrospective",
+    "startsAt": "2024-06-18T18:30:00Z",
+    "endsAt": "2024-06-18T20:00:00Z",
+    "location": "Reflection Hall",
+    "vrchatUrl": "https://vrchat.com/home/world/wrld_006",
+    "image": "./media/images/event-006.jpg",
+    "tags": ["Community", "Discussion"],
+    "featured": false,
+    "updatedAt": "2024-05-14T10:10:00Z",
+    "createdAt": "2024-05-01T09:30:00Z"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "news-001",
+    "title": "Neue Community-Guidelines veröffentlicht",
+    "body": "Die aktualisierten Guidelines legen besonderen Fokus auf respektvolles Miteinander in VR.",
+    "url": "https://communityhub.example.com/news/guidelines",
+    "publishedAt": "2024-05-20T08:00:00Z",
+    "updatedAt": "2024-05-20T08:00:00Z"
+  },
+  {
+    "id": "news-002",
+    "title": "Event-Reihe: Creator Spotlight",
+    "body": "Jeden Mittwoch stellen wir die spannendsten Creator und ihre Welten vor.",
+    "url": "https://communityhub.example.com/news/creator-spotlight",
+    "publishedAt": "2024-05-22T10:30:00Z",
+    "updatedAt": "2024-05-22T10:30:00Z"
+  },
+  {
+    "id": "news-003",
+    "title": "Beta-Test für neues Hub-Feature",
+    "body": "Teste als Erste*r unser neues Favoriten-System und gib Feedback.",
+    "url": "https://communityhub.example.com/news/beta-favorites",
+    "publishedAt": "2024-05-24T09:15:00Z",
+    "updatedAt": "2024-05-24T11:00:00Z"
+  },
+  {
+    "id": "news-004",
+    "title": "Community Highlight: VR Art Gallery",
+    "body": "Erkunde die neu kuratierte Kunstgalerie im VRChat Community Hub.",
+    "url": "https://communityhub.example.com/news/vr-art-gallery",
+    "publishedAt": "2024-05-26T12:00:00Z",
+    "updatedAt": "2024-05-26T12:00:00Z"
+  },
+  {
+    "id": "news-005",
+    "title": "Rückblick: Workshop Lighting Basics",
+    "body": "Danke an alle Teilnehmer*innen – hier sind die wichtigsten Erkenntnisse und Links.",
+    "url": "https://communityhub.example.com/news/workshop-recap",
+    "publishedAt": "2024-05-28T14:45:00Z",
+    "updatedAt": "2024-05-28T15:00:00Z"
+  }
+]
