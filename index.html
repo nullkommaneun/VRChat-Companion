@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="mixed">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Hub</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#app">Zum Inhalt springen</a>
+  <header class="app-header" role="banner">
+    <div class="branding" aria-label="Community Hub">
+      <h1>Community Hub</h1>
+      <p class="tagline">Gemeinsam vernetzt bleiben</p>
+    </div>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li><button type="button" data-route="home" aria-current="page">Home</button></li>
+        <li><button type="button" data-route="events">Events</button></li>
+        <li><button type="button" data-route="calendar">Kalender</button></li>
+        <li><button type="button" data-route="admin">Admin</button></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle" role="group" aria-label="Farbthema wählen">
+      <button type="button" data-theme="cyan">Cyan</button>
+      <button type="button" data-theme="magenta">Magenta</button>
+      <button type="button" data-theme="mixed" aria-pressed="true">Mixed</button>
+    </div>
+  </header>
+  <main id="app" tabindex="-1" role="main" aria-live="polite">
+    <section data-view="home" class="view" aria-hidden="false">
+      <h2>Willkommen</h2>
+      <p>Dies ist der Startpunkt des Community Hub. Hier findest du aktuelle Highlights und Ankündigungen.</p>
+    </section>
+    <section data-view="events" class="view" hidden aria-hidden="true">
+      <h2>Kommende Events</h2>
+      <p>In Kürze findest du hier eine Übersicht der nächsten Community-Treffen.</p>
+    </section>
+    <section data-view="calendar" class="view" hidden aria-hidden="true">
+      <h2>Kalender</h2>
+      <p>Der Kalender liefert dir bald eine detaillierte Monatsübersicht aller Aktivitäten.</p>
+    </section>
+    <section data-view="admin" class="view" hidden aria-hidden="true">
+      <h2>Admin Bereich</h2>
+      <p>Administrations-Tools folgen in einer späteren Phase. Bleib dran!</p>
+    </section>
+  </main>
+  <footer class="app-footer" role="contentinfo">
+    <p><span id="year"></span> &copy; Community Hub</p>
+  </footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
