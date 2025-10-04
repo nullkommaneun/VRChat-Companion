@@ -8,40 +8,52 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <!-- Fallback für Benutzer ohne JavaScript -->
+  <noscript>
+    <div style="padding: 1em; background: #ffe0b2; color: #e65100; border: 1px solid #ff9800; text-align: center; margin-bottom: 20px;">
+      <p>Diese Anwendung erfordert JavaScript, um vollständig zu funktionieren. Bitte aktivieren Sie JavaScript in Ihrem Browser.</p>
+      <p>Für eine grundlegende Ansicht können Sie versuchen, die Links im Header zu nutzen, auch wenn die Funktionalität eingeschränkt ist.</p>
+    </div>
+  </noscript>
+
   <a class="skip-link" href="#app">Zum Inhalt springen</a>
   <header class="app-header" role="banner">
-    <div class="branding" aria-label="Community Hub">
+    <!-- `aria-label` auf dem div entfernt, da das `h1` bereits den Inhalt für Screenreader liefert -->
+    <div class="branding">
       <h1>Community Hub</h1>
       <p class="tagline">Gemeinsam vernetzt bleiben</p>
     </div>
     <nav aria-label="Hauptnavigation">
       <ul class="nav-list">
-        <li><button type="button" data-route="home" aria-current="page">Home</button></li>
-        <li><button type="button" data-route="events">Events</button></li>
-        <li><button type="button" data-route="calendar">Kalender</button></li>
-        <li><button type="button" data-route="admin">Admin</button></li>
+        <!-- Buttons durch semantisch korrekte Links ersetzt; `href` auf Fragment-Identifier gesetzt -->
+        <li><a href="#home" data-route="home" aria-current="page">Home</a></li>
+        <li><a href="#events" data-route="events">Events</a></li>
+        <li><a href="#calendar" data-route="calendar">Kalender</a></li>
+        <li><a href="#admin" data-route="admin">Admin</a></li>
       </ul>
     </nav>
     <div class="theme-toggle" role="group" aria-label="Farbthema wählen">
       <button type="button" data-theme="cyan">Cyan</button>
       <button type="button" data-theme="magenta">Magenta</button>
-      <button type="button" data-theme="mixed" aria-pressed="true">Mixed</button>
+      <!-- Klasse `is-active` hinzugefügt für visuelle Kennzeichnung des aktiven Themes -->
+      <button type="button" data-theme="mixed" aria-pressed="true" class="is-active">Mixed</button>
     </div>
   </header>
   <main id="app" tabindex="-1" role="main" aria-live="polite">
-    <section data-view="home" class="view" aria-hidden="false">
+    <!-- IDs zu den Sektionen hinzugefügt, um sie als Sprungziele für die Navigation nutzen zu können -->
+    <section id="home" data-view="home" class="view" aria-hidden="false">
       <h2>Willkommen</h2>
       <p>Dies ist der Startpunkt des Community Hub. Hier findest du aktuelle Highlights und Ankündigungen.</p>
     </section>
-    <section data-view="events" class="view" hidden aria-hidden="true">
+    <section id="events" data-view="events" class="view" hidden aria-hidden="true">
       <h2>Kommende Events</h2>
       <p>In Kürze findest du hier eine Übersicht der nächsten Community-Treffen.</p>
     </section>
-    <section data-view="calendar" class="view" hidden aria-hidden="true">
+    <section id="calendar" data-view="calendar" class="view" hidden aria-hidden="true">
       <h2>Kalender</h2>
       <p>Der Kalender liefert dir bald eine detaillierte Monatsübersicht aller Aktivitäten.</p>
-    </section>
-    <section data-view="admin" class="view" hidden aria-hidden="true">
+    </p>
+    <section id="admin" data-view="admin" class="view" hidden aria-hidden="true">
       <h2>Admin Bereich</h2>
       <p>Administrations-Tools folgen in einer späteren Phase. Bleib dran!</p>
     </section>
