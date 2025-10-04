@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "News Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "body",
+      "url",
+      "publishedAt",
+      "updatedAt"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "body": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "publishedAt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "updatedAt": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
+  }
+}
