@@ -1,13 +1,38 @@
 :root {
   color-scheme: dark light;
-  --transition-speed: 200ms;
+
+  /* Spacing & Sizing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.25rem;
+  --spacing-xl: 1.5rem;
+  --spacing-xxl: 2rem;
+
+  /* Colors */
+  --bg-dark: #050510;
   --bg-glass: rgba(15, 15, 35, 0.7);
+  --bg-glass-btn: rgba(255, 255, 255, 0.08);
+  --bg-skip-link: rgba(12, 12, 45, 0.9); /* Dark blue background for skip link */
+  --bg-footer: rgba(5, 5, 16, 0.85);
+
   --border-glass: rgba(255, 255, 255, 0.25);
   --text-primary: #e8faff;
+  --text-on-accent: #080814; /* Color for text on active accent background */
+
   --accent-cyan: #1ccad8;
   --accent-magenta: #ff47d1;
   --active-bg: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+
+  /* Typography */
   --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-sm: 0.9rem;
+  --font-size-md: 1.5rem;
+  --font-size-xs: 0.85rem;
+
+  /* Transitions */
+  --transition-speed: 200ms;
+  --transition-ease: ease;
 }
 
 * {
@@ -18,29 +43,29 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-body);
+  color: var(--text-primary);
   background: radial-gradient(circle at 20% 20%, rgba(28, 202, 216, 0.15), transparent 55%),
     radial-gradient(circle at 80% 0%, rgba(255, 71, 209, 0.15), transparent 60%),
-    #050510;
-  color: var(--text-primary);
+    var(--bg-dark); /* Use custom property */
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 
 .skip-link {
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background-color: rgba(12, 12, 45, 0.9);
-  color: var(--text-primary);
+  top: var(--spacing-xs);
+  left: var(--spacing-xs);
   z-index: 10;
-  transform: translateY(-200%);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 999px; /* For pill shape */
+  background-color: var(--bg-skip-link); /* Use custom property */
+  color: var(--text-primary);
+  transform: translateY(-200%); /* Visually hide off-screen */
 }
 
 .skip-link:focus {
   transform: translateY(0);
-  transition: transform var(--transition-speed) ease;
+  transition: transform var(--transition-speed) var(--transition-ease);
 }
 
 .app-header {
@@ -49,10 +74,10 @@ body {
   z-index: 5;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
   background: var(--bg-glass);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-glass);
@@ -60,18 +85,18 @@ body {
 
 .branding h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--font-size-md);
 }
 
 .branding .tagline {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   opacity: 0.8;
 }
 
 .nav-list {
   display: flex;
-  gap: 0.75rem;
+  gap: var(--spacing-sm);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -79,19 +104,20 @@ body {
 
 .nav-list button,
 .theme-toggle button {
-  padding: 0.6rem 1.1rem;
+  padding: 0.6rem 1.1rem; /* Specific padding, could be custom property */
   border-radius: 999px;
   border: 1px solid var(--border-glass);
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--bg-glass-btn); /* Use custom property */
   color: var(--text-primary);
   font-weight: 600;
   cursor: pointer;
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) var(--transition-ease),
+              box-shadow var(--transition-speed) var(--transition-ease);
 }
 
 .nav-list button:hover,
 .theme-toggle button:hover {
-  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3); /* Could be custom property */
   transform: translateY(-2px);
 }
 
@@ -103,16 +129,16 @@ body {
 
 .nav-list button.is-active {
   background: var(--active-bg);
-  color: #080814;
+  color: var(--text-on-accent); /* Use custom property */
 }
 
 .theme-toggle button[aria-pressed="true"] {
   background: var(--active-bg);
-  color: #080814;
+  color: var(--text-on-accent); /* Use custom property */
 }
 
 main {
-  padding: 1.5rem clamp(1rem, 5vw, 3rem);
+  padding: var(--spacing-xl) clamp(var(--spacing-md), 5vw, 3rem);
 }
 
 .view {
@@ -120,10 +146,10 @@ main {
   margin-inline: auto;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: 1.25rem;
-  padding: 2rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
-  transition: opacity var(--transition-speed) ease;
+  border-radius: var(--spacing-lg); /* Use custom property for consistency with 1.25rem */
+  padding: var(--spacing-xxl);
+  box-shadow: 0 var(--spacing-md) var(--spacing-xxl) rgba(0, 0, 0, 0.35); /* Could be custom property */
+  transition: opacity var(--transition-speed) var(--transition-ease);
 }
 
 .view[hidden] {
@@ -132,16 +158,17 @@ main {
 
 .app-footer {
   text-align: center;
-  padding: 1rem;
-  background: rgba(5, 5, 16, 0.85);
+  padding: var(--spacing-md);
+  background: var(--bg-footer); /* Use custom property */
   border-top: 1px solid var(--border-glass);
 }
 
 .app-footer p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--font-size-xs);
 }
 
+/* Theme Overrides */
 html[data-theme="cyan"] {
   --accent-cyan: #37f2ff;
   --accent-magenta: #2b1766;
@@ -154,6 +181,7 @@ html[data-theme="magenta"] {
   --bg-glass: rgba(40, 10, 34, 0.75);
 }
 
+/* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -165,6 +193,7 @@ html[data-theme="magenta"] {
   }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .app-header {
     flex-direction: column;
