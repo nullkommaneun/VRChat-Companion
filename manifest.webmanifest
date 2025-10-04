@@ -1,0 +1,9 @@
+{
+  "name": "Community Hub",
+  "short_name": "Hub",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#050510",
+  "theme_color": "#1ccad8",
+  "lang": "de"
+}
