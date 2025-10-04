@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Events Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "startsAt",
+      "endsAt",
+      "location",
+      "vrchatUrl",
+      "image",
+      "tags",
+      "featured",
+      "updatedAt",
+      "createdAt"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "startsAt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "endsAt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "location": {
+        "type": "string"
+      },
+      "vrchatUrl": {
+        "type": "string"
+      },
+      "image": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "featured": {
+        "type": "boolean"
+      },
+      "updatedAt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
+  }
+}
