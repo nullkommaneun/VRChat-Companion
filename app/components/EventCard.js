@@ -27,17 +27,17 @@ export function createEventCard({ event, onToggleFavorite, favorite, formatDate 
     "aria-label",
     favorite ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"
   );
-  favoriteButton.innerHTML = favorite ? "★" : "☆";
+  favoriteButton.textContent = favorite ? "★" : "☆";
   favoriteButton.addEventListener("click", () => {
-    onToggleFavorite?.();
-    const isFav = !favoriteButton.classList.contains("is-active");
-    favoriteButton.classList.toggle("is-active", isFav);
-    favoriteButton.setAttribute("aria-pressed", String(isFav));
-    favoriteButton.innerHTML = isFav ? "★" : "☆";
+    const nextState = favoriteButton.getAttribute("aria-pressed") !== "true";
+    favoriteButton.classList.toggle("is-active", nextState);
+    favoriteButton.setAttribute("aria-pressed", String(nextState));
+    favoriteButton.textContent = nextState ? "★" : "☆";
     favoriteButton.setAttribute(
       "aria-label",
-      isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"
+      nextState ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"
     );
+    onToggleFavorite?.();
   });
 
   header.append(title, favoriteButton);
